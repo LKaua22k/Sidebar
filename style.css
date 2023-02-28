@@ -31,13 +31,11 @@
     width: 25rem;
     height: 100%;
     background-color: var(--green);
+    transition: 0.5s ease;
   }
 
   header{
-    padding: 0 2.9rem;
-  }
-  main{
-    padding:  0 2.3rem;
+    padding: 0 2.3rem;
   }
 
   header{
@@ -52,6 +50,34 @@
     width: 6.4rem;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Toggle Button */
+  .toggle{
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .toggle:hover{
+    background-color: var(--light-grey);
+    transition: 0.3s ease;
+  }
+
+
+  /* Main */
+  
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 55px);
+    margin-top: 2.6rem;  
+    padding:  0 2.3rem;
   }
 
   .serach {
@@ -72,29 +98,7 @@
     font-size: 1.5rem;
     line-height: 2.2rem;
   }
-
-  .teste{
-    display: flex;;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.6rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-
-  .teste:hover{
-    background-color: var(--light-grey);
-    transition: 0.3s ease;
-  }
   
-  main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 55px);
-    margin-top: 2.6rem;  
-  }
 
   li{
     list-style: none;
@@ -129,15 +133,6 @@
     margin-left: 0.9rem;
     color: var(--text-color);
   }
-  /* li .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-width: 6rem;
-    color: var(--text-color);
-    font-size: 20px;
-  } */
 
   li a span{
     display: flex;
@@ -148,6 +143,9 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
+
+  /* Footer */
+  
   footer{
     position: relative;
     display: flex;
@@ -186,7 +184,7 @@
 
   .img-fa{
     position: absolute;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content:center;
     top: 2.3rem;
@@ -194,18 +192,45 @@
     width: 2.4rem;
     height: 2.4rem;
     cursor: pointer;
+    transition: 0.5s;
   }
 
-  /* .close .logo-header{
+  /* Ssection */
+
+    section{
+      position: relative;
+      background-color: var(--body-bg-color);
+      height: 100vh;
+      width: calc(100% - 25rem);
+      left: 25rem;
+      transition: 0.5s;
+    }
+
+    section h1{
+      padding: 2.4rem 2.3rem;
+      color: var(--text-color);
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    .sidebar.close ~ section{
+      width: calc(100% - 7.8rem);
+      left: 7.8rem;
+      transition: 0.5s;
+    }
+  /* Close Sidebar */
+
+  .close .logo-header{
     display: none;
+  }
+
+   .sidebar.close{
+    width: 7.8rem;
+    transition: 0.5s;
   }
 
   .close header{
     justify-content: center;
     padding:  2.6rem 1.4rem;
-  }
-  .close .sidebar{
-    width: 7.8rem;
   }
   .close a {
     margin-left: 0px;
@@ -223,9 +248,17 @@
   padding:  0 1.4rem;
   margin-top: 0px;
   }
-  .close  .serach {
+  .close .serach {
     justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
   }
+
+  .close .serach:hover {
+    justify-content: center;
+    background-color: var(--light-grey);
+  }
+
 
   .close .serach input{
     display: none;
@@ -246,4 +279,4 @@
     justify-content: center;
     top: 0;
     left:1.8rem;
-  } */
+  } 
